@@ -1,0 +1,54 @@
+{
+  "_id": "589de223d83113657d7b1675",
+  "_modelType": "image",
+  "created": "2017-02-10T15:54:11.439000+00:00",
+  "creator": {
+    "_id": "55d4cde89fc3c1490e995086",
+    "name": "User VDSM"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459428e",
+    "description": "Images found based on a search for patients with a personal history, clinical diagnosis, or differential diagnosis of melanoma. All diagnoses confirmed by histopathology.",
+    "license": "CC-0",
+    "name": "MSK-4",
+    "updated": "2017-04-13T20:08:05.005000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 4288,
+      "pixelsY": 2848
+    },
+    "clinical": {
+      "age_approx": 75,
+      "benign_malignant": "benign",
+      "diagnosis": "nevus",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": true,
+      "nevus_type": null,
+      "sex": "male"
+    },
+    "unstructured": {
+      "mel_assoc_nev": "not applicable",
+      "mel_class": "not applicable",
+      "mel_mit": "0",
+      "mel_thick": "0",
+      "mel_type": "not applicable",
+      "ulcer": "not applicable"
+    }
+  },
+  "name": "ISIC_0016022",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2017-02-10T16:26:21.001000+00:00",
+      "userId": "55d4cde89fc3c1490e995086"
+    },
+    "tags": [
+      "ISBI 2017: Test"
+    ]
+  },
+  "updated": "2017-02-10T16:26:21.574000+00:00"
+}

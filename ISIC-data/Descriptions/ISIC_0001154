@@ -1,0 +1,47 @@
+{
+  "_id": "54e75605bae47850e86ce0d5",
+  "_modelType": "image",
+  "created": "2015-02-20T15:43:01.734000+00:00",
+  "creator": {
+    "_id": "5436c6e7bae4780a676c8f93",
+    "name": "User ZUPS"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5e1165975c945942a4",
+    "description": "Moles and melanomas.\nBiopsy-confirmed melanocytic lesions. Both malignant and benign lesions are included.",
+    "license": "CC-0",
+    "name": "UDA-2",
+    "updated": "2015-03-06T14:54:30.984000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "image_type": "dermoscopic",
+      "pixelsX": 3872,
+      "pixelsY": 2592
+    },
+    "clinical": {
+      "age_approx": 35,
+      "benign_malignant": "malignant",
+      "diagnosis": "melanoma",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": true,
+      "sex": "female"
+    },
+    "unstructured": {
+      "Location": "right ant shoulder",
+      "diagnosis": "201412407-1 MM Clark's level IV Breslow depth 1.02 mm without ulceration without significant regression with grater than one mitosis per square millimeter of tumor actual count=3",
+      "diagnosis_short": "melanoma"
+    }
+  },
+  "name": "ISIC_0001154",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2015-02-20T15:47:42.198000+00:00",
+      "userId": "5450e996bae47865794e4d0d"
+    },
+    "tags": []
+  },
+  "updated": "2015-12-03T18:05:41.670000+00:00"
+}

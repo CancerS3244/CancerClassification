@@ -1,0 +1,35 @@
+{
+  "_id": "5a7b374b1165971c9c7ec16e",
+  "_modelType": "image",
+  "created": "2018-02-07T17:28:43.809000+00:00",
+  "creator": {
+    "_id": "5428cb04bae478621f6159c9",
+    "name": "User 4YGG"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a74e98011659731f017fac1",
+    "description": "Images mirrored from Dermoscopedia, uploaded with the CC-BY license.",
+    "license": "CC-BY",
+    "name": "Dermoscopedia (CC-BY)",
+    "updated": "2018-02-02T22:43:12.408000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "pixelsX": 3768,
+      "pixelsY": 2515
+    },
+    "clinical": {},
+    "unstructured": {}
+  },
+  "name": "ISIC_0024206",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2018-02-12T18:16:57.259000+00:00",
+      "userId": "55d4cde89fc3c1490e995086"
+    },
+    "tags": []
+  },
+  "updated": "2018-02-07T17:28:43.809000+00:00"
+}

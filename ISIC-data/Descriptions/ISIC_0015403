@@ -1,0 +1,55 @@
+{
+  "_id": "582b93219fc3c1566bbccc17",
+  "_modelType": "image",
+  "created": "2016-11-15T22:58:41.814000+00:00",
+  "creator": {
+    "_id": "55d4cde89fc3c1490e995086",
+    "name": "User VDSM"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459427e",
+    "description": "Both benign and malignant melanocytic lesions.\nAlmost all diagnoses were confirmed by histopathology reports; the remainder consists of benign lesions confirmed by clinical follow-up. Images were not taken with modern digital cameras.",
+    "license": "CC-0",
+    "name": "MSK-1",
+    "updated": "2015-10-21T20:33:21.466000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 6648,
+      "pixelsY": 4419
+    },
+    "clinical": {
+      "age_approx": 55,
+      "benign_malignant": "benign",
+      "diagnosis": "nevus",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": true,
+      "sex": "male"
+    },
+    "unstructured": {
+      "biopsy done": "Y",
+      "clinical diagnosis/impression": "malignant melanoma",
+      "lesion id": "1053",
+      "localization": "r cheek",
+      "pathology diagnosis": "combined nevus",
+      "pathology diagnosis subtype": "congenital",
+      "pathology report available": "Y",
+      "patient": "418"
+    }
+  },
+  "name": "ISIC_0015403",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2016-11-17T14:45:24.437000+00:00",
+      "userId": "55d4cde89fc3c1490e995086"
+    },
+    "tags": [
+      "ISBI 2017: Test"
+    ]
+  },
+  "updated": "2016-11-17T14:45:25.309000+00:00"
+}

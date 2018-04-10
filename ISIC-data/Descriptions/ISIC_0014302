@@ -1,0 +1,59 @@
+{
+  "_id": "581cda1f9fc3c13dcd0e4738",
+  "_modelType": "image",
+  "created": "2016-11-04T18:57:35.990000+00:00",
+  "creator": {
+    "_id": "55d4cde89fc3c1490e995086",
+    "name": "User VDSM"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459428e",
+    "description": "Images found based on a search for patients with a personal history, clinical diagnosis, or differential diagnosis of melanoma. All diagnoses confirmed by histopathology.",
+    "license": "CC-0",
+    "name": "MSK-4",
+    "updated": "2017-04-13T20:08:05.005000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "image_type": "dermoscopic",
+      "pixelsX": 4288,
+      "pixelsY": 2848
+    },
+    "clinical": {
+      "age_approx": 85,
+      "benign_malignant": "malignant",
+      "diagnosis": "melanoma",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": true,
+      "nevus_type": null,
+      "sex": "male"
+    },
+    "unstructured": {
+      "anatom_site_general": "posterior trunk",
+      "anatomic": "back",
+      "laterality": "left",
+      "lesion_id": "A10872",
+      "mel_assoc_nev": "yes",
+      "mel_class": "melanoma in situ",
+      "mel_mit": "not applicable",
+      "mel_thick": "0 mm",
+      "mel_type": "unknown",
+      "race": "white",
+      "ulcer": "not applicable",
+      "vertical": "upper"
+    }
+  },
+  "name": "ISIC_0014302",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2016-11-06T17:32:28.405000+00:00",
+      "userId": "55d4cde89fc3c1490e995086"
+    },
+    "tags": [
+      "ISBI 2017: Validation"
+    ]
+  },
+  "updated": "2016-11-06T17:32:28.599000+00:00"
+}

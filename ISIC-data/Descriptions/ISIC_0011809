@@ -1,0 +1,56 @@
+{
+  "_id": "5593f3d49fc3c13155145fe4",
+  "_modelType": "image",
+  "created": "2015-07-01T14:06:12.293000+00:00",
+  "creator": {
+    "_id": "54cb974fbae47819d8e4c727",
+    "name": "User GQZH"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459427e",
+    "description": "Both benign and malignant melanocytic lesions.\nAlmost all diagnoses were confirmed by histopathology reports; the remainder consists of benign lesions confirmed by clinical follow-up. Images were not taken with modern digital cameras.",
+    "license": "CC-0",
+    "name": "MSK-1",
+    "updated": "2015-10-21T20:33:21.466000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 6708,
+      "pixelsY": 4439
+    },
+    "clinical": {
+      "age_approx": 65,
+      "benign_malignant": "benign",
+      "diagnosis": "nevus",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": true,
+      "sex": "female"
+    },
+    "unstructured": {
+      "Breslow": "",
+      "Clark": "",
+      "biopsy done": "Y",
+      "clinical diagnosis/impression": "blue nevus",
+      "lesion id": "956",
+      "localization": "l forehead",
+      "pathology diagnosis": "blue nevus",
+      "pathology diagnosis subtype": "common",
+      "pathology report available": "Y",
+      "patient": "333",
+      "previous biopsy": "N"
+    }
+  },
+  "name": "ISIC_0011809",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2015-08-21T15:57:18.498000+00:00",
+      "userId": "54cb967ebae47819d8e4c724"
+    },
+    "tags": []
+  },
+  "updated": "2015-08-31T23:45:15.392000+00:00"
+}

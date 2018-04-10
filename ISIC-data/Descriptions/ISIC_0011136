@@ -1,0 +1,56 @@
+{
+  "_id": "558d6471bae47801cf735368",
+  "_modelType": "image",
+  "created": "2015-06-26T14:40:49.805000+00:00",
+  "creator": {
+    "_id": "54cb974fbae47819d8e4c727",
+    "name": "User GQZH"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c94594284",
+    "description": "Biopsy-confirmed melanocytic and non-melanocytic skin lesions.\nThis dataset includes over 500 melanomas. Many images have polarized and contact variants.",
+    "license": "CC-0",
+    "name": "MSK-2",
+    "updated": "2015-10-21T20:33:29.916000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "image_type": "dermoscopic",
+      "pixelsX": 1024,
+      "pixelsY": 768
+    },
+    "clinical": {
+      "age_approx": 60,
+      "benign_malignant": "malignant",
+      "clin_size_long_diam_mm": 8.0,
+      "diagnosis": "melanoma",
+      "diagnosis_confirm_type": "histopathology",
+      "family_hx_mm": false,
+      "melanocytic": true,
+      "personal_hx_mm": false,
+      "sex": "male"
+    },
+    "unstructured": {
+      "change": "yes",
+      "changedtypeapr02_2015": "1",
+      "location": "Head/Neck",
+      "patientlocation": "-1",
+      "ptconcern": "yes",
+      "quantloc": "head & neck"
+    }
+  },
+  "name": "ISIC_0011136",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2015-07-08T14:32:46.342000+00:00",
+      "userId": "5450e996bae47865794e4d0d"
+    },
+    "tags": [
+      "ISBI 2016: Training",
+      "ISBI 2017: Training"
+    ]
+  },
+  "updated": "2015-10-02T15:33:47.953000+00:00"
+}

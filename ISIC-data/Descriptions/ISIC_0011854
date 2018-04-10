@@ -1,0 +1,56 @@
+{
+  "_id": "5593f4589fc3c131551460c5",
+  "_modelType": "image",
+  "created": "2015-07-01T14:08:24.448000+00:00",
+  "creator": {
+    "_id": "54cb974fbae47819d8e4c727",
+    "name": "User GQZH"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459427e",
+    "description": "Both benign and malignant melanocytic lesions.\nAlmost all diagnoses were confirmed by histopathology reports; the remainder consists of benign lesions confirmed by clinical follow-up. Images were not taken with modern digital cameras.",
+    "license": "CC-0",
+    "name": "MSK-1",
+    "updated": "2015-10-21T20:33:21.466000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 6621,
+      "pixelsY": 4381
+    },
+    "clinical": {
+      "age_approx": 85,
+      "benign_malignant": "benign",
+      "diagnosis": "nevus",
+      "diagnosis_confirm_type": "single image expert consensus",
+      "melanocytic": true,
+      "sex": null
+    },
+    "unstructured": {
+      "Breslow": "",
+      "Clark": "",
+      "biopsy done": "Y",
+      "clinical diagnosis/impression": "dysplastic nevus",
+      "lesion id": "1001",
+      "localization": "posterior thorax",
+      "pathology diagnosis": "dysplastic nevus",
+      "pathology diagnosis subtype": "",
+      "pathology report available": "N",
+      "patient": "373",
+      "previous biopsy": ""
+    }
+  },
+  "name": "ISIC_0011854",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2015-08-21T16:16:55.086000+00:00",
+      "userId": "55d5e0ce9fc3c10470dba1a1"
+    },
+    "tags": []
+  },
+  "updated": "2015-08-24T23:19:45.918000+00:00"
+}

@@ -1,0 +1,45 @@
+{
+  "_id": "5aa303e71165972a9e961894",
+  "_modelType": "image",
+  "created": "2018-03-09T22:00:07.408000+00:00",
+  "creator": {
+    "_id": "578e64b09fc3c10d6fd12e4f",
+    "name": "User 6YB2"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5aa2baff1165972a9e961672",
+    "description": "100 clinical images comprising the dataset used in order to reply to \"Classification of the clinical images for benign and malignant cutaneous tumors using a deep learning algorithm\" by Seung Seog Han et al. JID, 2018",
+    "license": "CC-0",
+    "name": "2018 JID Editorial Images",
+    "updated": "2018-03-09T16:49:03.002000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "image_type": "clinical",
+      "pixelsX": 2240,
+      "pixelsY": 1488
+    },
+    "clinical": {
+      "age_approx": 85,
+      "benign_malignant": "malignant",
+      "diagnosis": "melanoma",
+      "diagnosis_confirm_type": "histopathology",
+      "mel_class": "melanoma in situ",
+      "mel_thick_mm": 0.0,
+      "melanocytic": true,
+      "sex": "male"
+    },
+    "unstructured": {}
+  },
+  "name": "ISIC_0024227",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2018-03-09T23:21:32.039000+00:00",
+      "userId": "578e64b09fc3c10d6fd12e4f"
+    },
+    "tags": []
+  },
+  "updated": "2018-03-09T22:00:07.408000+00:00"
+}

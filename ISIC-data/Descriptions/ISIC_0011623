@@ -1,0 +1,54 @@
+{
+  "_id": "5592cfca9fc3c131551458de",
+  "_modelType": "image",
+  "created": "2015-06-30T17:20:10.331000+00:00",
+  "creator": {
+    "_id": "54cb974fbae47819d8e4c727",
+    "name": "User GQZH"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459427e",
+    "description": "Both benign and malignant melanocytic lesions.\nAlmost all diagnoses were confirmed by histopathology reports; the remainder consists of benign lesions confirmed by clinical follow-up. Images were not taken with modern digital cameras.",
+    "license": "CC-0",
+    "name": "MSK-1",
+    "updated": "2015-10-21T20:33:21.466000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 6648,
+      "pixelsY": 4419
+    },
+    "clinical": {
+      "age_approx": 85,
+      "benign_malignant": "benign",
+      "diagnosis_confirm_type": "single image expert consensus",
+      "sex": null
+    },
+    "unstructured": {
+      "Breslow": "",
+      "Clark": "",
+      "biopsy done": "",
+      "clinical diagnosis/impression": "compound nevus",
+      "lesion id": "797",
+      "localization": "anterior chest",
+      "pathology diagnosis": "",
+      "pathology diagnosis subtype": "",
+      "pathology report available": "N",
+      "patient": "202",
+      "previous biopsy": ""
+    }
+  },
+  "name": "ISIC_0011623",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2015-08-21T14:48:05.049000+00:00",
+      "userId": "54cb967ebae47819d8e4c724"
+    },
+    "tags": []
+  },
+  "updated": "2015-08-31T23:42:24.607000+00:00"
+}

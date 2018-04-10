@@ -1,0 +1,54 @@
+{
+  "_id": "5593f43d9fc3c13155146093",
+  "_modelType": "image",
+  "created": "2015-07-01T14:07:57.579000+00:00",
+  "creator": {
+    "_id": "54cb974fbae47819d8e4c727",
+    "name": "User GQZH"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459427e",
+    "description": "Both benign and malignant melanocytic lesions.\nAlmost all diagnoses were confirmed by histopathology reports; the remainder consists of benign lesions confirmed by clinical follow-up. Images were not taken with modern digital cameras.",
+    "license": "CC-0",
+    "name": "MSK-1",
+    "updated": "2015-10-21T20:33:21.466000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 6641,
+      "pixelsY": 4402
+    },
+    "clinical": {
+      "age_approx": 85,
+      "benign_malignant": null,
+      "diagnosis_confirm_type": "single image expert consensus",
+      "sex": null
+    },
+    "unstructured": {
+      "Breslow": "",
+      "Clark": "",
+      "biopsy done": "",
+      "clinical diagnosis/impression": "",
+      "lesion id": "992",
+      "localization": "r thigh",
+      "pathology diagnosis": "",
+      "pathology diagnosis subtype": "",
+      "pathology report available": "N",
+      "patient": "364",
+      "previous biopsy": ""
+    }
+  },
+  "name": "ISIC_0011844",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2015-08-21T15:57:18.612000+00:00",
+      "userId": "54cb967ebae47819d8e4c724"
+    },
+    "tags": []
+  },
+  "updated": "2015-08-31T23:38:48.726000+00:00"
+}

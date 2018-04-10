@@ -1,0 +1,56 @@
+{
+  "_id": "5592db5a9fc3c1315514597c",
+  "_modelType": "image",
+  "created": "2015-06-30T18:09:30.810000+00:00",
+  "creator": {
+    "_id": "54cb974fbae47819d8e4c727",
+    "name": "User GQZH"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459427e",
+    "description": "Both benign and malignant melanocytic lesions.\nAlmost all diagnoses were confirmed by histopathology reports; the remainder consists of benign lesions confirmed by clinical follow-up. Images were not taken with modern digital cameras.",
+    "license": "CC-0",
+    "name": "MSK-1",
+    "updated": "2015-10-21T20:33:21.466000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 6608,
+      "pixelsY": 4399
+    },
+    "clinical": {
+      "age_approx": 30,
+      "benign_malignant": "benign",
+      "diagnosis": "nevus",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": true,
+      "sex": "female"
+    },
+    "unstructured": {
+      "Breslow": "",
+      "Clark": "",
+      "biopsy done": "Y",
+      "clinical diagnosis/impression": "intradermal nevus",
+      "lesion id": "832",
+      "localization": "r neck",
+      "pathology diagnosis": "nevus",
+      "pathology diagnosis subtype": "intradermal",
+      "pathology report available": "Y",
+      "patient": "230",
+      "previous biopsy": "N"
+    }
+  },
+  "name": "ISIC_0011664",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2015-08-21T14:48:20.775000+00:00",
+      "userId": "54cb967ebae47819d8e4c724"
+    },
+    "tags": []
+  },
+  "updated": "2015-08-25T12:47:14.158000+00:00"
+}

@@ -1,0 +1,47 @@
+{
+  "_id": "5825fd9e9fc3c171066d347c",
+  "_modelType": "image",
+  "created": "2016-11-11T17:19:26.479000+00:00",
+  "creator": {
+    "_id": "55d4cde89fc3c1490e995086",
+    "name": "User VDSM"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c94594292",
+    "description": "Seborrheic keratoses obtained from patients during a clinical visit. These lesions were not biopsied and were determined to be seborrheic keratoses by agreement of three experts.",
+    "license": "CC-0",
+    "name": "MSK-5",
+    "updated": "2017-04-13T20:08:24.725000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "image_type": "dermoscopic",
+      "pixelsX": 2592,
+      "pixelsY": 1936
+    },
+    "clinical": {
+      "age_approx": 65,
+      "benign_malignant": "benign",
+      "diagnosis": "seborrheic keratosis",
+      "diagnosis_confirm_type": "single image expert consensus",
+      "melanocytic": false,
+      "sex": "female"
+    },
+    "unstructured": {
+      "anatom_site_general": "trunk"
+    }
+  },
+  "name": "ISIC_0014597",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2016-11-11T17:33:29.913000+00:00",
+      "userId": "55d4cde89fc3c1490e995086"
+    },
+    "tags": [
+      "ISBI 2017: Validation"
+    ]
+  },
+  "updated": "2016-11-11T17:33:30.030000+00:00"
+}

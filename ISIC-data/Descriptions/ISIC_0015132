@@ -1,0 +1,55 @@
+{
+  "_id": "582b90f59fc3c1566bbcc224",
+  "_modelType": "image",
+  "created": "2016-11-15T22:49:25.201000+00:00",
+  "creator": {
+    "_id": "55d4cde89fc3c1490e995086",
+    "name": "User VDSM"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459427e",
+    "description": "Both benign and malignant melanocytic lesions.\nAlmost all diagnoses were confirmed by histopathology reports; the remainder consists of benign lesions confirmed by clinical follow-up. Images were not taken with modern digital cameras.",
+    "license": "CC-0",
+    "name": "MSK-1",
+    "updated": "2015-10-21T20:33:21.466000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 6681,
+      "pixelsY": 4422
+    },
+    "clinical": {
+      "age_approx": 75,
+      "benign_malignant": "malignant",
+      "diagnosis": "melanoma",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": true,
+      "sex": "male"
+    },
+    "unstructured": {
+      "biopsy done": "Y",
+      "clinical diagnosis/impression": "malignant melanoma or dysplastic nevus",
+      "lesion id": "673",
+      "localization": "interscapular ",
+      "pathology diagnosis": "malignant melanoma with intradermal nevus",
+      "pathology diagnosis subtype": "",
+      "pathology report available": "Y",
+      "patient": "107"
+    }
+  },
+  "name": "ISIC_0015132",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2016-11-16T19:38:25.713000+00:00",
+      "userId": "55d4cde89fc3c1490e995086"
+    },
+    "tags": [
+      "ISBI 2017: Test"
+    ]
+  },
+  "updated": "2016-11-16T19:38:26.313000+00:00"
+}

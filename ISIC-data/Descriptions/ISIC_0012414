@@ -1,0 +1,55 @@
+{
+  "_id": "57eea3b89fc3c12a89bb5b84",
+  "_modelType": "image",
+  "created": "2016-09-30T17:41:12.377000+00:00",
+  "creator": {
+    "_id": "5428cb04bae478621f6159c9",
+    "name": "User 4YGG"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459428a",
+    "description": "Assorted images and lesions, mostly nevi and basal cell carcinomas. These images were found based on a search not filtered for any particular pathology. All diagnoses confirmed by histopathology.",
+    "license": "CC-0",
+    "name": "MSK-3",
+    "updated": "2017-04-13T20:07:38.035000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 4288,
+      "pixelsY": 2848
+    },
+    "clinical": {
+      "age_approx": 70,
+      "benign_malignant": "benign",
+      "diagnosis": "seborrheic keratosis",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": false,
+      "nevus_type": null,
+      "sex": "male"
+    },
+    "unstructured": {
+      "mel_assoc_nev": "not applicable",
+      "mel_assoc_nevus": "not applicable",
+      "mel_class": "not applicable",
+      "mel_mit": "not applicable",
+      "mel_thick": "998 mm",
+      "mel_type": "not applicable",
+      "ulcer": "no"
+    }
+  },
+  "name": "ISIC_0012414",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2016-09-30T19:34:27.421000+00:00",
+      "userId": "578e64b09fc3c10d6fd12e4f"
+    },
+    "tags": [
+      "ISBI 2017: Test"
+    ]
+  },
+  "updated": "2016-09-30T19:34:27.421000+00:00"
+}

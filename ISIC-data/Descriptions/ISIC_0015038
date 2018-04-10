@@ -1,0 +1,55 @@
+{
+  "_id": "582b90379fc3c1566bbcbeb2",
+  "_modelType": "image",
+  "created": "2016-11-15T22:46:15.704000+00:00",
+  "creator": {
+    "_id": "55d4cde89fc3c1490e995086",
+    "name": "User VDSM"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459427e",
+    "description": "Both benign and malignant melanocytic lesions.\nAlmost all diagnoses were confirmed by histopathology reports; the remainder consists of benign lesions confirmed by clinical follow-up. Images were not taken with modern digital cameras.",
+    "license": "CC-0",
+    "name": "MSK-1",
+    "updated": "2015-10-21T20:33:21.466000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 6602,
+      "pixelsY": 4381
+    },
+    "clinical": {
+      "age_approx": null,
+      "benign_malignant": "benign",
+      "diagnosis": "seborrheic keratosis",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": false,
+      "sex": "male"
+    },
+    "unstructured": {
+      "biopsy done": "Y",
+      "clinical diagnosis/impression": "seborrheic keratosis",
+      "lesion id": "1108",
+      "localization": "l lateral thorax",
+      "pathology diagnosis": "seborrheic keratosis",
+      "pathology diagnosis subtype": "pigmented inflamed",
+      "pathology report available": "Y",
+      "patient": "459"
+    }
+  },
+  "name": "ISIC_0015038",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2016-11-16T19:32:23.802000+00:00",
+      "userId": "55d4cde89fc3c1490e995086"
+    },
+    "tags": [
+      "ISBI 2017: Training"
+    ]
+  },
+  "updated": "2016-11-16T19:32:23.931000+00:00"
+}

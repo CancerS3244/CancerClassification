@@ -1,0 +1,56 @@
+{
+  "_id": "5593f44a9fc3c131551460ac",
+  "_modelType": "image",
+  "created": "2015-07-01T14:08:10.991000+00:00",
+  "creator": {
+    "_id": "54cb974fbae47819d8e4c727",
+    "name": "User GQZH"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459427e",
+    "description": "Both benign and malignant melanocytic lesions.\nAlmost all diagnoses were confirmed by histopathology reports; the remainder consists of benign lesions confirmed by clinical follow-up. Images were not taken with modern digital cameras.",
+    "license": "CC-0",
+    "name": "MSK-1",
+    "updated": "2015-10-21T20:33:21.466000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 6668,
+      "pixelsY": 4479
+    },
+    "clinical": {
+      "age_approx": 70,
+      "benign_malignant": "benign",
+      "diagnosis": null,
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": null,
+      "sex": "female"
+    },
+    "unstructured": {
+      "Breslow": "",
+      "Clark": "",
+      "biopsy done": "Y",
+      "clinical diagnosis/impression": "thrombosed angioma",
+      "lesion id": "996",
+      "localization": "l lateral thorax",
+      "pathology diagnosis": "tattoo",
+      "pathology diagnosis subtype": "graphite",
+      "pathology report available": "Y",
+      "patient": "368",
+      "previous biopsy": "N"
+    }
+  },
+  "name": "ISIC_0011849",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2015-08-21T15:57:18.628000+00:00",
+      "userId": "54cb967ebae47819d8e4c724"
+    },
+    "tags": []
+  },
+  "updated": "2015-08-24T23:18:59.136000+00:00"
+}

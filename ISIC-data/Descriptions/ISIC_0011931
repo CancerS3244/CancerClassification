@@ -1,0 +1,56 @@
+{
+  "_id": "559432069fc3c1315514637a",
+  "_modelType": "image",
+  "created": "2015-07-01T18:31:34.613000+00:00",
+  "creator": {
+    "_id": "54cb974fbae47819d8e4c727",
+    "name": "User GQZH"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459427e",
+    "description": "Both benign and malignant melanocytic lesions.\nAlmost all diagnoses were confirmed by histopathology reports; the remainder consists of benign lesions confirmed by clinical follow-up. Images were not taken with modern digital cameras.",
+    "license": "CC-0",
+    "name": "MSK-1",
+    "updated": "2015-10-21T20:33:21.466000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 6648,
+      "pixelsY": 4459
+    },
+    "clinical": {
+      "age_approx": 70,
+      "benign_malignant": "malignant",
+      "diagnosis": "melanoma",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": true,
+      "sex": "male"
+    },
+    "unstructured": {
+      "Breslow": "",
+      "Clark": "",
+      "biopsy done": "Y",
+      "clinical diagnosis/impression": "rule out malignant melanoma",
+      "lesion id": "1070",
+      "localization": "r shoulder",
+      "pathology diagnosis": "malignant melanoma",
+      "pathology diagnosis subtype": "in situ",
+      "pathology report available": "Y",
+      "patient": "106",
+      "previous biopsy": "N"
+    }
+  },
+  "name": "ISIC_0011931",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2015-08-21T16:17:05.878000+00:00",
+      "userId": "55d5e0ce9fc3c10470dba1a1"
+    },
+    "tags": []
+  },
+  "updated": "2015-08-24T16:38:05.087000+00:00"
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "54e7de3bbae4780ec59ce18e",
+  "_modelType": "image",
+  "created": "2015-02-21T01:24:11.082000+00:00",
+  "creator": {
+    "_id": "54cb974fbae47819d8e4c727",
+    "name": "User GQZH"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5e1165975c945942a0",
+    "description": "Moles in children.\nBenign melanocytic lesions from a pediatric population. The benign nature of the lesions is based on clinical assessment and/or no change on serial imaging.",
+    "license": "CC-0",
+    "name": "SONIC",
+    "updated": "2016-08-10T15:36:43.866000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "image_type": "clinical",
+      "pixelsX": 3024,
+      "pixelsY": 2016
+    },
+    "clinical": {
+      "age_approx": 15,
+      "benign_malignant": "benign",
+      "diagnosis": "nevus",
+      "diagnosis_confirm_type": "single image expert consensus",
+      "melanocytic": true,
+      "sex": "male"
+    },
+    "unstructured": {
+      "diagnosis": "nevus",
+      "race": "White"
+    }
+  },
+  "name": "ISIC_0004366",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2015-08-21T16:38:07.016000+00:00",
+      "userId": "55d5e0ce9fc3c10470dba1a1"
+    },
+    "tags": []
+  },
+  "updated": "2015-12-03T18:13:46.398000+00:00"
+}

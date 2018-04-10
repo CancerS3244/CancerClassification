@@ -1,0 +1,59 @@
+{
+  "_id": "581cda9f9fc3c13dcd0e4dbc",
+  "_modelType": "image",
+  "created": "2016-11-04T18:59:43.093000+00:00",
+  "creator": {
+    "_id": "55d4cde89fc3c1490e995086",
+    "name": "User VDSM"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459428e",
+    "description": "Images found based on a search for patients with a personal history, clinical diagnosis, or differential diagnosis of melanoma. All diagnoses confirmed by histopathology.",
+    "license": "CC-0",
+    "name": "MSK-4",
+    "updated": "2017-04-13T20:08:05.005000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "image_type": "dermoscopic",
+      "pixelsX": 4288,
+      "pixelsY": 2848
+    },
+    "clinical": {
+      "age_approx": 70,
+      "benign_malignant": "benign",
+      "diagnosis": "seborrheic keratosis",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": false,
+      "nevus_type": null,
+      "sex": "male"
+    },
+    "unstructured": {
+      "anatom_site_general": "anterior trunk",
+      "anatomic": "abdomen",
+      "laterality": "left",
+      "lesion_id": "A10776",
+      "mel_assoc_nev": "unknown",
+      "mel_class": "unknown",
+      "mel_mit": "unknown",
+      "mel_thick": "unknown",
+      "mel_type": "unknown",
+      "race": "unknown",
+      "ulcer": "unknown",
+      "vertical": "unknown"
+    }
+  },
+  "name": "ISIC_0014474",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2016-11-06T17:32:56.271000+00:00",
+      "userId": "55d4cde89fc3c1490e995086"
+    },
+    "tags": [
+      "ISBI 2017: Test"
+    ]
+  },
+  "updated": "2016-11-06T17:32:56.357000+00:00"
+}

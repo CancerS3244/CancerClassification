@@ -1,0 +1,56 @@
+{
+  "_id": "559437ad9fc3c13155146621",
+  "_modelType": "image",
+  "created": "2015-07-01T18:55:41.259000+00:00",
+  "creator": {
+    "_id": "54cb974fbae47819d8e4c727",
+    "name": "User GQZH"
+  },
+  "dataset": {
+    "_accessLevel": 0,
+    "_id": "5a2ecc5d1165975c9459427e",
+    "description": "Both benign and malignant melanocytic lesions.\nAlmost all diagnoses were confirmed by histopathology reports; the remainder consists of benign lesions confirmed by clinical follow-up. Images were not taken with modern digital cameras.",
+    "license": "CC-0",
+    "name": "MSK-1",
+    "updated": "2015-10-21T20:33:21.466000+00:00"
+  },
+  "meta": {
+    "acquisition": {
+      "dermoscopic_type": "contact non-polarized",
+      "image_type": "dermoscopic",
+      "pixelsX": 6642,
+      "pixelsY": 4440
+    },
+    "clinical": {
+      "age_approx": 85,
+      "benign_malignant": "malignant",
+      "diagnosis": "melanoma",
+      "diagnosis_confirm_type": "histopathology",
+      "melanocytic": true,
+      "sex": null
+    },
+    "unstructured": {
+      "Breslow": "",
+      "Clark": "",
+      "biopsy done": "Y",
+      "clinical diagnosis/impression": "",
+      "lesion id": "1213",
+      "localization": "r lower leg",
+      "pathology diagnosis": "malignant melanoma",
+      "pathology diagnosis subtype": "spitzoid",
+      "pathology report available": "N",
+      "patient": "553",
+      "previous biopsy": ""
+    }
+  },
+  "name": "ISIC_0012064",
+  "notes": {
+    "reviewed": {
+      "accepted": true,
+      "time": "2015-08-21T16:17:31.277000+00:00",
+      "userId": "55d5e0ce9fc3c10470dba1a1"
+    },
+    "tags": []
+  },
+  "updated": "2015-08-24T12:03:33.573000+00:00"
+}
