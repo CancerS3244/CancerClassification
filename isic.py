@@ -15,7 +15,7 @@ import tensorflow as tf
 tf.logging.set_verbosity(tf.logging.INFO)
 
 def build_dataset():
-  MAX_NUMBER_OF_DATA = 300
+  MAX_NUMBER_OF_DATA = 10000
   number_of_data = 0
 
   img_file_names = []
@@ -31,13 +31,13 @@ def build_dataset():
         metadata = json.load(meta)
         label = metadata["meta"]["clinical"]["benign_malignant"]
         img = Image.open(image_file_path)
-        img = img.resize((28,28))
+        img = img.resize((56,56))
 
         img_file_names.append(image_file_path)
         labels.append(1 if label == "malignant" else 0)
 
         img = np.asarray(img)
-        img = np.reshape(img, (28 * 28, 3))
+        img = np.reshape(img, (56 * 56, 3))
         
         data.append(img)
         
@@ -55,7 +55,7 @@ def cnn_model_fn(features, labels, mode):
   # -1 for batch size ==> dynamically computed based on input values
   # 28,28 for img width and height
   # 1 channel (monochrome)
-  input_layer = tf.reshape(features["x"], [-1, 28, 28, 3])
+  input_layer = tf.reshape(features["x"], [-1, 56, 56, 3])
   print(input_layer)
 
   # Convolutional Layer #1
@@ -87,16 +87,17 @@ def cnn_model_fn(features, labels, mode):
   # Dense Layer (same as fully connected)
   # pool2 width and pool2 height = 7
   # pool2 channels = 64
-  pool2_flat = tf.reshape(pool2, [-1, 7 * 7 * 64])
+  pool2_flat = tf.reshape(pool2, [-1, 14 * 14 * 64])
   # 1024 units, ReLU activation
   dense = tf.layers.dense(inputs=pool2_flat, units=1024, activation=tf.nn.relu)
   # dropout layer has shape [batch_size, 1024]
-  # dropout = tf.layers.dropout(
-  #         inputs=dense, rate=0.4, training=mode == tf.estimator.ModeKeys.TRAIN)
+  dropout = tf.layers.dropout(
+    inputs=dense, rate=0.4, training=mode == tf.estimator.ModeKeys.TRAIN
+    )
 
   # Logits Layer
   # 10 units, one for each digit target class (0–9).
-  logits = tf.layers.dense(inputs=dense, units=2)
+  logits = tf.layers.dense(inputs=dropout, units=2)
 
   predictions = {
       # Generate predictions (for PREDICT and EVAL mode)
@@ -172,7 +173,7 @@ def main():
 
 def debug_print():
   temp_x, temp_y = build_dataset()
-  input_layer = tf.reshape(temp_x[0], [-1,28,28,3])
+  input_layer = tf.reshape(temp_x[0], [-1,56,56,3])
   filter_size = 5
   input_channels = 3
   output_filters = 32
