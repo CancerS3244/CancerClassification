@@ -140,46 +140,50 @@ logging_hook = tf.train.LoggingTensorHook(
     tensors=tensors_to_log, every_n_iter=50)
 
 def main():
-    
+  NUM_TRAINING_ITERATIONS = 20
+  
   # Load training and eval data
-  D, labels = build_dataset()
-  X_train, X_test, y_train, y_test = train_test_split(D, labels)
+  data, labels = build_dataset()
+  training_data, test_data, training_labels, test_labels = train_test_split(
+      data, labels, test_size=0.33, shuffle=False)
 
   # actual training of model
   train_input_fn = tf.estimator.inputs.numpy_input_fn(
-      x={"x": X_train}, # shape (N, w*d)
-      y=y_train, # shape
-      batch_size=1,
-      num_epochs=2, # num of epochs to iterate over data. If `None` will run forever.
-      shuffle=True)
-  cs3244_classifier.train(
+    x={"x": training_data}, # shape (N, w*d)
+    y=training_labels, # shape
+    batch_size=10,
+    num_epochs=2, # num of epochs to iterate over data. If `None` will run forever.
+    shuffle=True)
+  
+  for i in range(0, NUM_TRAINING_ITERATIONS):
+    cs3244_classifier.train(
       input_fn=train_input_fn,
-      steps=100000, # train until input_fn stops
-      )
+      steps=None, # train until input_fn stops
+    )
   
   # Evaluate the model and print results
   eval_input_fn = tf.estimator.inputs.numpy_input_fn(
-      x={"x": X_test},
-      y=y_test,
+      x={"x": test_data},
+      y=test_labels,
       num_epochs=1,
       shuffle=False)
   eval_results = cs3244_classifier.evaluate(input_fn=eval_input_fn)
   print(eval_results)
 
 def debug_print():
-    temp_x, temp_y = build_dataset()
-    input_layer = tf.reshape(temp_x[0], [-1,28,28,3])
-    filter_size = 5
-    input_channels = 3
-    output_filters = 32
-    xx = tf.placeholder(tf.float32, shape=[None, 512, 512, 3])
-    yy = tf.nn.conv2d(xx, filter=tf.Variable(tf.truncated_normal([filter_size, filter_size, input_channels, output_filters], stddev=0.5)), strides=[1,1,1,1] , padding='SAME')
-    conv1 = tf.layers.conv2d(
-        inputs=input_layer,
-        filters=32,
-        kernel_size=[5, 5],
-        padding="same",
-        activation=tf.nn.relu)
-    pool1 = tf.layers.max_pooling2d(inputs=conv1, pool_size=[2, 2], strides=2)
+  temp_x, temp_y = build_dataset()
+  input_layer = tf.reshape(temp_x[0], [-1,28,28,3])
+  filter_size = 5
+  input_channels = 3
+  output_filters = 32
+  xx = tf.placeholder(tf.float32, shape=[None, 512, 512, 3])
+  yy = tf.nn.conv2d(xx, filter=tf.Variable(tf.truncated_normal([filter_size, filter_size, input_channels, output_filters], stddev=0.5)), strides=[1,1,1,1] , padding='SAME')
+  conv1 = tf.layers.conv2d(
+      inputs=input_layer,
+      filters=32,
+      kernel_size=[5, 5],
+      padding="same",
+      activation=tf.nn.relu)
+  pool1 = tf.layers.max_pooling2d(inputs=conv1, pool_size=[2, 2], strides=2)
 
 main()
