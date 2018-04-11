@@ -145,8 +145,14 @@ def main():
   
   # Load training and eval data
   data, labels = build_dataset()
+  
+  # We oversample positive training sets
+  while (sum(labels) / len(labels) < 0.4):
+      data = np.concatenate((data, data[labels == 1]))
+      labels = np.concatenate((labels, labels[labels == 1]))
+  
   training_data, test_data, training_labels, test_labels = train_test_split(
-      data, labels, test_size=0.33, shuffle=False)
+      data, labels, test_size=0.33, shuffle=True)
 
   # actual training of model
   train_input_fn = tf.estimator.inputs.numpy_input_fn(
@@ -157,17 +163,18 @@ def main():
     shuffle=True)
   
   for i in range(0, NUM_TRAINING_ITERATIONS):
-    cs3244_classifier.train(
-      input_fn=train_input_fn,
-      steps=None, # train until input_fn stops
-    )
+      print(round(i / NUM_TRAINING_ITERATIONS * 100, 2), "% done")
+      cs3244_classifier.train(
+              input_fn=train_input_fn,
+              steps=None, # train until input_fn stops
+              )
   
   # Evaluate the model and print results
   eval_input_fn = tf.estimator.inputs.numpy_input_fn(
       x={"x": test_data},
       y=test_labels,
       num_epochs=1,
-      shuffle=False)
+      shuffle=True)
   eval_results = cs3244_classifier.evaluate(input_fn=eval_input_fn)
   print(eval_results)
 
