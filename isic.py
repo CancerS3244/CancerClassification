@@ -14,13 +14,20 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 tf.logging.set_verbosity(tf.logging.INFO)
 
+MAX_NUMBER_OF_DATA = 450
+
 def build_dataset():
-  MAX_NUMBER_OF_DATA = 10000
   number_of_data = 0
 
   img_file_names = []
   labels = []
   data = []
+  benign_labels = []
+  malign_labels = []
+  benign_data = []
+  malign_data = []
+  benign_num = 0
+  malign_num = 0
 
   for image_file_path in glob.glob("ISIC-data/resized_images_width_64/*.jpg", recursive=True):
     (image_name, ext) =  os.path.splitext(os.path.basename(image_file_path))
@@ -33,20 +40,40 @@ def build_dataset():
         img = Image.open(image_file_path)
         img = img.resize((56,56))
 
-        img_file_names.append(image_file_path)
-        labels.append(1 if label == "malignant" else 0)
-
-        img = np.asarray(img)
-        img = np.reshape(img, (56 * 56, 3))
-        
-        data.append(img)
-        
-      number_of_data += 1
-
-    if (number_of_data == MAX_NUMBER_OF_DATA):
-      break
+        if (label == "benign"):
+          if (benign_num < MAX_NUMBER_OF_DATA):
+            img = np.asarray(img)
+            img = np.reshape(img, (56 * 56, 3))
+            benign_data.append(img)
+            benign_labels.append(0)
+            benign_num = benign_num + 1
+            
+          elif (benign_num == MAX_NUMBER_OF_DATA):
+            if (malign_num < MAX_NUMBER_OF_DATA):
+              continue
+            else:
+              break            
+        elif (label == "malignant"):
+          if (malign_num < MAX_NUMBER_OF_DATA):
+            img = np.asarray(img)
+            img = np.reshape(img, (56 * 56, 3))
+            malign_data.append(img)
+            malign_labels.append(1)
+            malign_num = malign_num + 1;
+            
+          elif (malign_num == MAX_NUMBER_OF_DATA):
+            if (benign_num < MAX_NUMBER_OF_DATA):
+              continue
+            else:
+              break 
   
   # returns 2-tuple of data and labels.
+  for i in range(MAX_NUMBER_OF_DATA):
+    data.append(benign_data[i])
+    data.append(malign_data[i])
+    labels.append(benign_labels[i])
+    labels.append(malign_labels[i])
+
   return (np.asarray(data, dtype=np.float32), np.asarray(labels, dtype=np.int32)) 
 
 def cnn_model_fn(features, labels, mode):
@@ -141,7 +168,7 @@ logging_hook = tf.train.LoggingTensorHook(
     tensors=tensors_to_log, every_n_iter=50)
 
 def main():
-  NUM_TRAINING_ITERATIONS = 20
+  NUM_TRAINING_ITERATIONS = 3
   
   # Load training and eval data
   data, labels = build_dataset()
@@ -163,13 +190,13 @@ def main():
     )
   
   # Evaluate the model and print results
-  eval_input_fn = tf.estimator.inputs.numpy_input_fn(
+    eval_input_fn = tf.estimator.inputs.numpy_input_fn(
       x={"x": test_data},
       y=test_labels,
       num_epochs=1,
       shuffle=False)
-  eval_results = cs3244_classifier.evaluate(input_fn=eval_input_fn)
-  print(eval_results)
+    eval_results = cs3244_classifier.evaluate(input_fn=eval_input_fn)
+    print(eval_results)
 
 def debug_print():
   temp_x, temp_y = build_dataset()
