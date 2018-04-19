@@ -80,10 +80,10 @@ def cnn_model_fn(features, labels, mode):
   """Model function for CNN."""
   # Input Layer with shape [batch_size, image_width, image_height, channels]
   # -1 for batch size ==> dynamically computed based on input values
-  # 28,28 for img width and height
-  # 1 channel (monochrome)
-
+  # resize width and height to 56 by 56
+  # 3 channels since image has RGB channels
   input_layer = tf.reshape(features["x"], [-1,56,56,3])
+  
   # Convolutional Layer #1
   # Applies 96 11x11 filters (extracting 11x11-pixel subregions), with ReLU activation function
   conv1 = tf.layers.conv2d(
@@ -97,6 +97,7 @@ def cnn_model_fn(features, labels, mode):
   # Performs max pooling with a 2x2 filter and stride of 2
   # pool regions do not overlap
   pool1 = tf.layers.max_pooling2d(inputs=conv1, pool_size=[2, 2], strides=1)
+  print(pool1)
 
   # Convolutional Layer #2 and Pooling Layer #2
   # Applies 64 5x5 filters, with ReLU activation function
@@ -109,7 +110,7 @@ def cnn_model_fn(features, labels, mode):
   # conv2 shape: [batchsize, 14, 14, 64]
   # max pooling with a 2x2 filter and stride of 2
   pool2 = tf.layers.max_pooling2d(inputs=conv2, pool_size=[2, 2], strides=1)
-
+  print(pool2)
 
   # Convolutional Layer #2 and Pooling Layer #2
   # Applies 64 5x5 filters, with ReLU activation function
@@ -127,6 +128,7 @@ def cnn_model_fn(features, labels, mode):
       padding="same",
       activation=tf.nn.relu)
 
+  # Outputs [BATCH_SIZE , 11, 11, 256]
   conv5 = tf.layers.conv2d(
       inputs=conv4,
       filters=256,
@@ -134,12 +136,12 @@ def cnn_model_fn(features, labels, mode):
       padding="same",
       activation=tf.nn.relu)
   pool5 = tf.layers.max_pooling2d(inputs=conv5, pool_size=[2, 2], strides=1)
+  print(pool5)
+  
+  # Flatten for neural net
+  pool5_flat = tf.reshape(pool5, [-1, 11 * 11 * 256])
 
-  # Dense Layer (same as fully connected)
-  # pool2 width and pool2 height = 7
-  # pool2 channels = 64
-  pool5_flat = tf.reshape(pool5, [1, -1])
-
+  
   dense1 = tf.layers.dense(inputs=pool5_flat, units=4096, activation=tf.nn.relu)
   dense2 = tf.layers.dense(inputs=dense1, units=4096, activation=tf.nn.relu)
 
@@ -236,7 +238,7 @@ def main():
     max_value = max(max_value, eval_results['accuracy'])
   print("max acc: {}".format(max_value))
 
-'''
+
 def debug_print():
   temp_x, temp_y = build_dataset()
   input_layer = tf.reshape(temp_x[0], [-1,56,56,3])
@@ -253,6 +255,7 @@ def debug_print():
   # Performs max pooling with a 2x2 filter and stride of 2
   # pool regions do not overlap
   pool1 = tf.layers.max_pooling2d(inputs=conv1, pool_size=[2, 2], strides=1)
+  print(pool1)
 
   # Convolutional Layer #2 and Pooling Layer #2
   # Applies 64 5x5 filters, with ReLU activation function
@@ -265,7 +268,7 @@ def debug_print():
   # conv2 shape: [batchsize, 14, 14, 64]
   # max pooling with a 2x2 filter and stride of 2
   pool2 = tf.layers.max_pooling2d(inputs=conv2, pool_size=[2, 2], strides=1)
-
+  print(pool2)
 
   # Convolutional Layer #2 and Pooling Layer #2
   # Applies 64 5x5 filters, with ReLU activation function
@@ -283,6 +286,7 @@ def debug_print():
       padding="same",
       activation=tf.nn.relu)
 
+  # Outputs [BATCH_SIZE , 11, 11, 256]
   conv5 = tf.layers.conv2d(
       inputs=conv4,
       filters=256,
@@ -290,11 +294,11 @@ def debug_print():
       padding="same",
       activation=tf.nn.relu)
   pool5 = tf.layers.max_pooling2d(inputs=conv5, pool_size=[2, 2], strides=1)
+  print(pool5)
+  
+  # Flatten for neural net
+  pool5_flat = tf.reshape(pool5, [-1, 11 * 11 * 256])
 
-  # Dense Layer (same as fully connected)
-  # pool2 width and pool2 height = 7
-  # pool2 channels = 64
-  pool5_flat = tf.reshape(pool5, [1, -1])
 
   dense1 = tf.layers.dense(inputs=pool5_flat, units=4096, activation=tf.nn.relu)
   dense2 = tf.layers.dense(inputs=dense1, units=4096, activation=tf.nn.relu)
@@ -304,7 +308,7 @@ def debug_print():
   )
 
   logits = tf.layers.dense(inputs=dropout2, units=2)
-'''
+
 
 main()
 #debug_print()
