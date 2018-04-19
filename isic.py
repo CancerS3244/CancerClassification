@@ -116,15 +116,22 @@ def cnn_model_fn(features, labels, mode):
   # pool2 channels = 64
   pool2_flat = tf.reshape(pool2, [-1, 14 * 14 * 64])
   # 1024 units, ReLU activation
-  dense = tf.layers.dense(inputs=pool2_flat, units=1024, activation=tf.nn.relu)
+  dense1 = tf.layers.dense(inputs=pool2_flat, units=1024, activation=tf.nn.relu)
   # dropout layer has shape [batch_size, 1024]
-  dropout = tf.layers.dropout(
-    inputs=dense, rate=0.4, training=mode == tf.estimator.ModeKeys.TRAIN
+  dropout1 = tf.layers.dropout(
+    inputs=dense1, rate=0.2, training=mode == tf.estimator.ModeKeys.TRAIN
+    )
+  
+  dense2 = tf.layers.dense(inputs=dropout1, units=10, activation=tf.nn.relu)
+  # dropout layer has shape [batch_size, 1024]
+  
+  dropout2 = tf.layers.dropout(
+    inputs=dense2, rate=0.1, training=mode == tf.estimator.ModeKeys.TRAIN
     )
 
   # Logits Layer
   # 10 units, one for each digit target class (0–9).
-  logits = tf.layers.dense(inputs=dropout, units=2)
+  logits = tf.layers.dense(inputs=dropout2, units=2)
 
   predictions = {
       # Generate predictions (for PREDICT and EVAL mode)
@@ -168,7 +175,8 @@ logging_hook = tf.train.LoggingTensorHook(
     tensors=tensors_to_log, every_n_iter=50)
 
 def main():
-  NUM_TRAINING_ITERATIONS = 3
+  NUM_TRAINING_ITERATIONS = 1
+  max_value = 0.0
   
   # Load training and eval data
   data, labels = build_dataset()
@@ -194,9 +202,11 @@ def main():
       x={"x": test_data},
       y=test_labels,
       num_epochs=1,
-      shuffle=False)
+      shuffle=True)
     eval_results = cs3244_classifier.evaluate(input_fn=eval_input_fn)
     print(eval_results)
+    max_value = max(max_value, eval_results['accuracy'])
+  print("max acc: {}".format(max_value))
 
 def debug_print():
   temp_x, temp_y = build_dataset()
