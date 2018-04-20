@@ -1,5 +1,5 @@
 # imports
-import glob, os, json
+import glob, os, json, pickle
 
 import numpy as np
 import pandas as pd
@@ -205,8 +205,8 @@ def variable_summaries(var):
     tf.summary.histogram('histogram', var)
 
 def main():
-  NUM_TRAINING_ITERATIONS = 2
-  EPOCS_INDEX = 0
+  NUM_TRAINING_ITERATIONS = 10
+  EPOCHS_INDEX = 0
   TRAINING_INDEX = 1
   TEST_INDEX = 2
   data_to_save = [[],[],[]]
@@ -221,7 +221,7 @@ def main():
     x={"x": training_data}, # shape (N, w*d)
     y=training_labels, # shape
     batch_size=10,
-    num_epochs=5, # num of epochs to iterate over data. If `None` will run forever.
+    num_epochs=1, # num of epochs to iterate over data. If `None` will run forever.
     shuffle=True)
   
   for i in range(0, NUM_TRAINING_ITERATIONS):    
@@ -236,7 +236,7 @@ def main():
       y=test_labels,
       num_epochs=1,
       shuffle=True)
-    data_to_save[EPOCS_INDEX].append(i)
+    data_to_save[EPOCHS_INDEX].append(i)
 
     eval_input_training = tf.estimator.inputs.numpy_input_fn(
       x={"x": training_data},
@@ -254,8 +254,8 @@ def main():
     eval_test_results = cs3244_classifier.evaluate(input_fn=eval_input_test)
     data_to_save[TEST_INDEX].append(eval_test_results['accuracy'])
 
-  print(data_to_save)
-
+    with open("data.pkl", "wb") as f:
+    	pickle.dump(data_to_save, f)
 
 def debug_print():
   temp_x, temp_y = build_dataset()
