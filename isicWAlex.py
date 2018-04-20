@@ -14,7 +14,7 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 tf.logging.set_verbosity(tf.logging.WARN)
 
-MAX_NUMBER_OF_DATA = 450
+MAX_NUMBER_OF_DATA = 1000
 
 def build_dataset():
   number_of_data = 0
@@ -205,8 +205,11 @@ def variable_summaries(var):
     tf.summary.histogram('histogram', var)
 
 def main():
-  NUM_TRAINING_ITERATIONS = 3
-  max_value = 0.0
+  NUM_TRAINING_ITERATIONS = 2
+  EPOCS_INDEX = 0
+  TRAINING_INDEX = 1
+  TEST_INDEX = 2
+  data_to_save = [[],[],[]]
   
   # Load training and eval data
   data, labels = build_dataset()
@@ -221,7 +224,7 @@ def main():
     num_epochs=5, # num of epochs to iterate over data. If `None` will run forever.
     shuffle=True)
   
-  for i in range(0, NUM_TRAINING_ITERATIONS):
+  for i in range(0, NUM_TRAINING_ITERATIONS):    
     cs3244_classifier.train(
       input_fn=train_input_fn,
       steps=100000 # train until input_fn stops
@@ -233,10 +236,25 @@ def main():
       y=test_labels,
       num_epochs=1,
       shuffle=True)
-    eval_results = cs3244_classifier.evaluate(input_fn=eval_input_fn)
-    print(eval_results)
-    max_value = max(max_value, eval_results['accuracy'])
-  print("max acc: {}".format(max_value))
+    data_to_save[EPOCS_INDEX].append(i)
+
+    eval_input_training = tf.estimator.inputs.numpy_input_fn(
+      x={"x": training_data},
+      y=training_labels,
+      num_epochs=1,
+      shuffle=True)
+    eval_training_results = cs3244_classifier.evaluate(input_fn=eval_input_training)
+    data_to_save[TRAINING_INDEX].append(eval_training_results['accuracy'])
+
+    eval_input_test = tf.estimator.inputs.numpy_input_fn(
+      x={"x": test_data},
+      y=test_labels,
+      num_epochs=1,
+      shuffle=True)
+    eval_test_results = cs3244_classifier.evaluate(input_fn=eval_input_test)
+    data_to_save[TEST_INDEX].append(eval_test_results['accuracy'])
+
+  print(data_to_save)
 
 
 def debug_print():
